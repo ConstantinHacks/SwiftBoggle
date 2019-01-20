@@ -16,6 +16,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var boardCollectionView: UICollectionView!
     
+    @IBAction func onShuffleTap(_ sender: Any) {
+        board = Board()
+        boardCollectionView.reloadData()
+    }
+    
     let columnLayout = ColumnFlowLayout(
         cellsPerRow: 4,
         minimumInteritemSpacing: 4,

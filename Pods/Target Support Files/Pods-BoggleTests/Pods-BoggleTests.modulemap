@@ -1,0 +1,6 @@
+framework module Pods_BoggleTests {
+  umbrella header "Pods-BoggleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

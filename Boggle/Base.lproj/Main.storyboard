@@ -18,11 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwJ-98-Ehq">
-                                <rect key="frame" x="150" y="585" width="75" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwJ-98-Ehq" customClass="MDCButton">
+                                <rect key="frame" x="142.5" y="581" width="90" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Bd1-O3-5Te"/>
+                                    <constraint firstAttribute="width" constant="90" id="gsA-AC-Vnd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Shuffle">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onShuffleTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A9x-x5-Nme"/>
@@ -69,9 +73,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92849975824356079" green="0.61164349317550659" blue="0.18052452802658081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SwJ-98-Ehq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ANo-nM-4mX"/>
                             <constraint firstItem="qAe-zq-7Ar" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="LUn-vC-59x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qAe-zq-7Ar" secondAttribute="trailing" constant="15" id="Tmu-wR-R6m"/>
-                            <constraint firstItem="SwJ-98-Ehq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xew-kq-S96"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SwJ-98-Ehq" secondAttribute="bottom" constant="41" id="bsq-Yd-idb"/>
                             <constraint firstItem="qAe-zq-7Ar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="dWq-e0-8MF"/>
                         </constraints>
@@ -79,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="boardCollectionView" destination="qAe-zq-7Ar" id="AUB-Vd-ckl"/>
+                        <outlet property="shuffleButton" destination="SwJ-98-Ehq" id="MDK-lV-6Wl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

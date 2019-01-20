@@ -9,7 +9,7 @@
 import Foundation
 
 class Constants {
-    let Dice = [
+    static let Dice = [
         [ "I", "T", "S" , "T", "D", "Y" ],
         [ "L", "R", "H" , "Z", "N", "N" ],
         [ "H", "E", "E" , "N", "G", "W" ],

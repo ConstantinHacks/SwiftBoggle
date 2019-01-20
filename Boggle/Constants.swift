@@ -9,6 +9,13 @@
 import Foundation
 
 class Constants {
+    static let DICE_FACES = 6
+    static let ROWSIZE = 4
+    static let BOARDSIZE = 16
+    
+    static let BoardIndices = 0..<Constants.BOARDSIZE
+    static let DiceIndices = 0..<Constants.DICE_FACES
+    
     static let Dice = [
         [ "I", "T", "S" , "T", "D", "Y" ],
         [ "L", "R", "H" , "Z", "N", "N" ],

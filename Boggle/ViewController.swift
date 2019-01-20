@@ -12,7 +12,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     public let REUSEIDENTIFIER = "LetterTile"
     private let itemsPerRow: CGFloat = 4
-
+    private var board: Board = Board()
+    
     @IBOutlet weak var boardCollectionView: UICollectionView!
     
     let columnLayout = ColumnFlowLayout(
@@ -30,7 +31,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         boardCollectionView.collectionViewLayout = columnLayout
         boardCollectionView.contentInsetAdjustmentBehavior = .always
-//        boardCollectionView.register(LetterTileViewCell.self, forCellWithReuseIdentifier: REUSEIDENTIFIER)
+        
+        board.printBoard()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,7 +43,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let cell = boardCollectionView.dequeueReusableCell(withReuseIdentifier: REUSEIDENTIFIER, for: indexPath) as! LetterTileViewCell
         
-        cell.letterLabel.text = "Qu"
+        cell.letterLabel.text = board.getTileAt1DPosition(index: indexPath.row).letter
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         

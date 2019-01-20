@@ -17,6 +17,8 @@
 		2FA8599E21F4BCC800BBB3E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8599D21F4BCC800BBB3E1 /* Constants.swift */; };
 		2FA859A021F4FBA300BBB3E1 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8599F21F4FBA300BBB3E1 /* ColumnFlowLayout.swift */; };
 		2FA859A221F4FE6900BBB3E1 /* LetterTileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA859A121F4FE6900BBB3E1 /* LetterTileViewCell.swift */; };
+		2FA859A421F50B7000BBB3E1 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA859A321F50B7000BBB3E1 /* Tile.swift */; };
+		2FA859A621F50C2300BBB3E1 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA859A521F50C2300BBB3E1 /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		2FA8599D21F4BCC800BBB3E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2FA8599F21F4FBA300BBB3E1 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		2FA859A121F4FE6900BBB3E1 /* LetterTileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTileViewCell.swift; sourceTree = "<group>"; };
+		2FA859A321F50B7000BBB3E1 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		2FA859A521F50C2300BBB3E1 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				2FA8599D21F4BCC800BBB3E1 /* Constants.swift */,
 				2FA8599F21F4FBA300BBB3E1 /* ColumnFlowLayout.swift */,
 				2FA859A121F4FE6900BBB3E1 /* LetterTileViewCell.swift */,
+				2FA859A321F50B7000BBB3E1 /* Tile.swift */,
+				2FA859A521F50C2300BBB3E1 /* Board.swift */,
 			);
 			path = Boggle;
 			sourceTree = "<group>";
@@ -212,8 +218,10 @@
 				2FA8597D21F4B6C500BBB3E1 /* ViewController.swift in Sources */,
 				2FA8597B21F4B6C500BBB3E1 /* AppDelegate.swift in Sources */,
 				2FA859A221F4FE6900BBB3E1 /* LetterTileViewCell.swift in Sources */,
+				2FA859A421F50B7000BBB3E1 /* Tile.swift in Sources */,
 				2FA859A021F4FBA300BBB3E1 /* ColumnFlowLayout.swift in Sources */,
 				2FA8598321F4B6C500BBB3E1 /* Boggle.xcdatamodeld in Sources */,
+				2FA859A621F50C2300BBB3E1 /* Board.swift in Sources */,
 				2FA8599E21F4BCC800BBB3E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,17 +9,26 @@
 import Foundation
 
 class Tile {
-    
     var letter : String
     var used : Bool
+    var state : State
+    
+    enum State {
+        case currentlySelected
+        case used
+        case unused
+        case neighbour
+    }
     
     init() {
         letter = "A"
         used = false
+        state = State.unused
     }
     
     init(pLetter: String) {
         letter = pLetter
         used = false
+        state = State.unused
     }
 }

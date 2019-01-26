@@ -8,6 +8,9 @@
 
 import UIKit
 
-class LetterTileViewCell: UICollectionViewCell {    
+class LetterTileViewCell: UICollectionViewCell {
+    
+    var tile = Tile()
+    
     @IBOutlet weak var letterLabel: UILabel!
 }

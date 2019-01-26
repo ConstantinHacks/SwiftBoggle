@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Constants {
     static let DICE_FACES = 6
@@ -15,6 +16,9 @@ class Constants {
     
     static let BoardIndices = 0..<Constants.BOARDSIZE
     static let DiceIndices = 0..<Constants.DICE_FACES
+    
+    static let currentSelectedColor = UIColor.green
+    static let alreadyUsed = UIColor.gray
     
     static let Dice = [
         [ "I", "T", "S" , "T", "D", "Y" ],

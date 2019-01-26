@@ -37,7 +37,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         MDCOutlinedButtonThemer.applyScheme(buttonScheme, to: shuffleButton)
         shuffleButton.backgroundColor = UIColor.white
-        shuffleButton.inkColor = UIColor.orange
         
         boardCollectionView.delegate = self
         boardCollectionView.dataSource = self
@@ -57,11 +56,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = boardCollectionView.dequeueReusableCell(withReuseIdentifier: REUSEIDENTIFIER, for: indexPath) as! LetterTileViewCell
         
         cell.letterLabel.text = board.getTileAt1DPosition(index: indexPath.row).letter
+        cell.tile = board.getTileAt1DPosition(index: indexPath.row)
+        
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
+        
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
         return cell
     }
     
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: self.boardCollectionView)
+        let indexPath = self.boardCollectionView.indexPathForItem(at: location)
+        
+        if let index = indexPath {
+            print("Got clicked on index: \(index.row)!")
+            
+            let cell = self.boardCollectionView.cellForItem(at: index) as! LetterTileViewCell
+            let tile = cell.tile
+            let isUsed = !tile.used
+            
+            board.getTileAt1DPosition(index: index.row).used = isUsed
+        }
+    }
 
 }

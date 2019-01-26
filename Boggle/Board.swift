@@ -17,6 +17,8 @@ class Board {
         [Tile(),Tile(),Tile(),Tile()]
     ]
     
+    public var currentString = ""
+    
     init() {
         var boardIndicesArray = Constants.BoardIndices.shuffled()
         var counter = 0

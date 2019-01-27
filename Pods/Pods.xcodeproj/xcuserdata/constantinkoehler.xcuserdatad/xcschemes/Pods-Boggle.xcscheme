@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27DDCF4521E3521CB65E5BBE4F98F042"
+               BlueprintIdentifier = "82165787688354312082054E2E12146F"
                BuildableName = "Pods_Boggle.framework"
                BlueprintName = "Pods-Boggle"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "27DDCF4521E3521CB65E5BBE4F98F042"
+            BlueprintIdentifier = "82165787688354312082054E2E12146F"
             BuildableName = "Pods_Boggle.framework"
             BlueprintName = "Pods-Boggle"
             ReferencedContainer = "container:Pods.xcodeproj">

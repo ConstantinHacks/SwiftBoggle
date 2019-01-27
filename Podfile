@@ -6,6 +6,10 @@ target 'Boggle' do
   use_frameworks!
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/Buttons+ButtonThemer'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
+  pod 'RxDataSources', '~> 3.0'
+
 
   target 'BoggleTests' do
     inherit! :search_paths

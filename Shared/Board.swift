@@ -29,7 +29,7 @@ class Board {
                 let die = Constants.Dice[boardIndicesArray[counter]]
                 let letter = die[dieFaceIndex]
                 
-                let tile = Tile(pLetter: letter, id: counter)
+                let tile = Tile(pLetter: letter)
                 tiles[rowNum][colNum] = tile
                 counter += 1
             }

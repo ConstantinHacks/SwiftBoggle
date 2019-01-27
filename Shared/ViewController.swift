@@ -7,16 +7,14 @@
 //
 
 import UIKit
-import MaterialComponents.MaterialButtons_ButtonThemer
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     public let REUSEIDENTIFIER = "LetterTile"
     private let itemsPerRow: CGFloat = 4
     private var board: Board = Board()
-    private let buttonScheme = MDCButtonScheme()
 
-    @IBOutlet weak var shuffleButton: MDCButton!
+    @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var boardCollectionView: UICollectionView!
     
     @IBAction func onShuffleTap(_ sender: Any) {
@@ -34,10 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        MDCOutlinedButtonThemer.applyScheme(buttonScheme, to: shuffleButton)
-        shuffleButton.backgroundColor = UIColor.white
-        
+                
         boardCollectionView.delegate = self
         boardCollectionView.dataSource = self
         

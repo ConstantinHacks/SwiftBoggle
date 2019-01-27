@@ -7,12 +7,9 @@
 //
 
 import Foundation
-import RxDataSources
 
-
-struct Tile: IdentifiableType, Equatable {
+struct Tile {
     
-    var id : Int
     var letter : String
     var used : Bool
     var state : State
@@ -25,20 +22,15 @@ struct Tile: IdentifiableType, Equatable {
     }
     
     init() {
-        id = 0
         letter = "A"
         used = false
         state = State.unused
     }
     
-    init(pLetter: String, id: Int) {
-        self.id = id
+    init(pLetter: String) {
         letter = pLetter
         used = false
         state = State.unused
     }
     
-    var identity: Int {
-        return id
-    }
 }

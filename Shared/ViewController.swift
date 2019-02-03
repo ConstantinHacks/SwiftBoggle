@@ -12,15 +12,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     public let REUSEIDENTIFIER = "LetterTile"
     private let itemsPerRow: CGFloat = 4
+    private let SECOUNDSINROUND = 30
+
     private var board: Board = Board()
 
     @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var boardCollectionView: UICollectionView!
     
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    var timerSeconds = 0
+    var timer : Timer?
+    
     @IBAction func onShuffleTap(_ sender: Any) {
+        print("Shuffling the Board")
         board = Board()
         boardCollectionView.reloadData()
         board.printBoard()
+        timerSeconds = SECOUNDSINROUND
+        setTimer()
     }
     
     let columnLayout = ColumnFlowLayout(
@@ -40,6 +50,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         boardCollectionView.contentInsetAdjustmentBehavior = .always
         
         board.printBoard()
+        
+        setTimer()
+
+        timerSeconds = SECOUNDSINROUND
+    }
+    
+    func setTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func fireTimer() {
+        timerSeconds -= 1
+        timerLabel.text = String(timerSeconds)
+        
+        if(timerSeconds <= 0){
+            timer?.invalidate()
+            SoundPlayer().playSound()
+        } else if(timerSeconds < 10){
+            timerLabel.textColor = UIColor.red
+        } else if(timerSeconds < SECOUNDSINROUND / 2){
+            timerLabel.textColor = UIColor.yellow
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

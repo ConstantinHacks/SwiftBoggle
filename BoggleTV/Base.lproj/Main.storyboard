@@ -70,17 +70,26 @@
                                     <action selector="onShuffleTap:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ey1-LO-2pH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo5-dK-cKV">
+                                <rect key="frame" x="899" y="59" width="123" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Fo5-dK-cKV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8sW-6x-3Jw"/>
                             <constraint firstItem="Etb-te-udv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MA8-JV-sng"/>
                             <constraint firstItem="Etb-te-udv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PFc-LS-1ch"/>
+                            <constraint firstItem="Etb-te-udv" firstAttribute="top" secondItem="Fo5-dK-cKV" secondAttribute="bottom" constant="40" id="esA-Lc-tFr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
                         <outlet property="boardCollectionView" destination="Etb-te-udv" id="CGz-pa-eje"/>
                         <outlet property="shuffleButton" destination="XEh-mg-1WP" id="Xas-hy-ael"/>
+                        <outlet property="timerLabel" destination="Fo5-dK-cKV" id="ucf-PB-4wx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

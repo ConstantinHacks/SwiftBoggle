@@ -32,6 +32,10 @@
 		2FA859A621F50C2300BBB3E1 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA859A521F50C2300BBB3E1 /* Board.swift */; };
 		4732540AFBAC7B223D3F2327 /* Pods_Boggle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635F5D39B5F76431874D457 /* Pods_Boggle.framework */; };
 		6DD18FD32745E8D8E29990FC /* Pods_BoggleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A37927A5F70557EBC5778D /* Pods_BoggleTests.framework */; };
+		BDACE4F622075E1900B50A3B /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDACE4F522075E1900B50A3B /* SoundPlayer.swift */; };
+		BDACE4F722075E5900B50A3B /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDACE4F522075E1900B50A3B /* SoundPlayer.swift */; };
+		BDACE4F92207608E00B50A3B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDACE4F82207608E00B50A3B /* bell.mp3 */; };
+		BDACE4FA2207608E00B50A3B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDACE4F82207608E00B50A3B /* bell.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,8 @@
 		2FA859A521F50C2300BBB3E1 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		6DB67762651B10154252EB4A /* Pods-Boggle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boggle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boggle/Pods-Boggle.release.xcconfig"; sourceTree = "<group>"; };
 		B6241DA5EB320FDE488BBD68 /* Pods-Boggle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boggle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boggle/Pods-Boggle.debug.xcconfig"; sourceTree = "<group>"; };
+		BDACE4F522075E1900B50A3B /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		BDACE4F82207608E00B50A3B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 		C192257DCABA942AF5A808F4 /* Pods-BoggleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoggleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoggleTests/Pods-BoggleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D635F5D39B5F76431874D457 /* Pods_Boggle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boggle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33D83AD405F610A1177E3B2 /* Pods-BoggleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoggleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoggleTests/Pods-BoggleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,12 +160,14 @@
 		2F9E387821FE6F2A00906432 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BDACE4F82207608E00B50A3B /* bell.mp3 */,
 				2FA8597C21F4B6C500BBB3E1 /* ViewController.swift */,
 				2FA8599D21F4BCC800BBB3E1 /* Constants.swift */,
 				2FA8599F21F4FBA300BBB3E1 /* ColumnFlowLayout.swift */,
 				2FA859A121F4FE6900BBB3E1 /* LetterTileViewCell.swift */,
 				2FA859A321F50B7000BBB3E1 /* Tile.swift */,
 				2FA859A521F50C2300BBB3E1 /* Board.swift */,
+				BDACE4F522075E1900B50A3B /* SoundPlayer.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 			files = (
 				2F9E386421FE6AFB00906432 /* Assets.xcassets in Resources */,
 				2F9E386221FE6AF400906432 /* Main.storyboard in Resources */,
+				BDACE4FA2207608E00B50A3B /* bell.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA8598821F4B6C700BBB3E1 /* LaunchScreen.storyboard in Resources */,
+				BDACE4F92207608E00B50A3B /* bell.mp3 in Resources */,
 				2FA8598521F4B6C700BBB3E1 /* Assets.xcassets in Resources */,
 				2FA8598021F4B6C500BBB3E1 /* Main.storyboard in Resources */,
 			);
@@ -471,6 +481,7 @@
 				2F9E387721FE6F1700906432 /* ViewController.swift in Sources */,
 				2F9E387B21FE6F8300906432 /* LetterTileViewCell.swift in Sources */,
 				2F9E387C21FE6F8600906432 /* Tile.swift in Sources */,
+				BDACE4F722075E5900B50A3B /* SoundPlayer.swift in Sources */,
 				2F9E387A21FE6F8000906432 /* ColumnFlowLayout.swift in Sources */,
 				2F9E385A21FE6AF400906432 /* AppDelegate.swift in Sources */,
 				2F9E387D21FE6F8800906432 /* Board.swift in Sources */,
@@ -494,6 +505,7 @@
 				2FA8597B21F4B6C500BBB3E1 /* AppDelegate.swift in Sources */,
 				2FA859A221F4FE6900BBB3E1 /* LetterTileViewCell.swift in Sources */,
 				2FA859A421F50B7000BBB3E1 /* Tile.swift in Sources */,
+				BDACE4F622075E1900B50A3B /* SoundPlayer.swift in Sources */,
 				2FA859A021F4FBA300BBB3E1 /* ColumnFlowLayout.swift in Sources */,
 				2FA8598321F4B6C500BBB3E1 /* Boggle.xcdatamodeld in Sources */,
 				2FA859A621F50C2300BBB3E1 /* Board.swift in Sources */,

@@ -36,7 +36,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LetterTile" id="6XQ-87-6qb" customClass="LetterTileViewCell" customModule="Boggle">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LetterTile" id="6XQ-87-6qb" customClass="LetterTileViewCell" customModule="BoggleTV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -55,6 +55,9 @@
                                             <constraint firstItem="NtE-IE-2YN" firstAttribute="centerX" secondItem="6XQ-87-6qb" secondAttribute="centerX" id="0WV-7G-4TR"/>
                                             <constraint firstItem="NtE-IE-2YN" firstAttribute="centerY" secondItem="6XQ-87-6qb" secondAttribute="centerY" id="3n8-ha-hdb"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="letterLabel" destination="NtE-IE-2YN" id="Pjr-eo-zDs"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
